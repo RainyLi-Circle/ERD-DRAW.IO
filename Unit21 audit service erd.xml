@@ -1,0 +1,75 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- Canonical Table: COMPLIANCE_ANALYSIS -->
+    <mxCell id="100" value="DIM_COMPLIANCE_ANALYSIS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+      <mxGeometry x="520" y="220" width="300" height="180" as="geometry"/>
+    </mxCell>
+    
+    <!-- Source Table: AUDIT_SERVICE -->
+    <mxCell id="200" value="AUDIT_SERVICE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- Source Table: RISK_METADATA.TAGS -->
+    <mxCell id="300" value="RISK_METADATA.TAGS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+      <mxGeometry x="40" y="140" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- Source Table: ENTITY_SERVICE.INSTITUTIONS -->
+    <mxCell id="400" value="ENTITY_SERVICE.INSTITUTIONS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+      <mxGeometry x="40" y="260" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- Source Table: COMPLIANCE_CMT.OPERATIONS_CASE_INFO -->
+    <mxCell id="500" value="COMPLIANCE_CMT.OPERATIONS_CASE_INFO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+      <mxGeometry x="40" y="380" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- Source Table: CASE_CONTENTS -->
+    <mxCell id="600" value="CASE_CONTENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+      <mxGeometry x="290" y="500" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- Source Table: ALERT_CONTENTS -->
+    <mxCell id="700" value="ALERT_CONTENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+      <mxGeometry x="540" y="500" width="220" height="100" as="geometry"/>
+    </mxCell>
+    
+    <!-- Relationships -->
+    <!-- AUDIT_SERVICE to COMPLIANCE_ANALYSIS -->
+    <mxCell id="800" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="200" target="100">
+      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+    </mxCell>
+    
+    <!-- RISK_METADATA.TAGS to COMPLIANCE_ANALYSIS -->
+    <mxCell id="900" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="300" target="100">
+      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+    </mxCell>
+    
+    <!-- ENTITY_SERVICE.INSTITUTIONS to COMPLIANCE_ANALYSIS -->
+    <mxCell id="1000" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="400" target="100">
+      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+    </mxCell>
+    
+    <!-- COMPLIANCE_CMT.OPERATIONS_CASE_INFO to COMPLIANCE_ANALYSIS -->
+    <mxCell id="1100" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="500" target="100">
+      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+    </mxCell>
+    
+    <!-- CASE_CONTENTS to COMPLIANCE_ANALYSIS -->
+    <mxCell id="1200" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="600" target="100">
+      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+    </mxCell>
+    
+    <!-- ALERT_CONTENTS to COMPLIANCE_ANALYSIS -->
+    <mxCell id="1300" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="700" target="100">
+      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+    </mxCell>
+    
+  </root>
+</mxGraphModel>
+
+
