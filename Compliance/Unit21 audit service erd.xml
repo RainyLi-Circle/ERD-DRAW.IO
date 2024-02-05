@@ -2,71 +2,72 @@
   <root>
     <mxCell id="0"/>
     <mxCell id="1" parent="0"/>
-
-    <!-- Canonical Table: COMPLIANCE_ANALYSIS -->
+    
+    <!-- Entity: COMPLIANCE_ANALYSIS -->
     <mxCell id="100" value="COMPLIANCE_ANALYSIS&#10;--------------------------------------&#10;entity_id: VARCHAR&#10;entity_type: VARCHAR&#10;disposition: VARCHAR&#10;status: VARCHAR&#10;create_date: TIMESTAMP&#10;update_date: TIMESTAMP&#10;disposition_date: TIMESTAMP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;align=left;" vertex="1" parent="1">
-      <mxGeometry x="520" y="220" width="300" height="240" as="geometry"/>
+      <mxGeometry x="20" y="20" width="300" height="180" as="geometry"/>
     </mxCell>
     
-    <!-- Source Table: AUDIT_SERVICE -->
-    <mxCell id="200" value="AUDIT_SERVICE&#10;--------------------------------------&#10;audit_id: VARCHAR&#10;action: VARCHAR&#10;created_at: TIMESTAMP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;align=left;" vertex="1" parent="1">
-      <mxGeometry x="40" y="20" width="220" height="140" as="geometry"/>
+    <!-- Entity: AUDIT_SERVICE -->
+    <mxCell id="200" value="AUDIT_SERVICE&#10;--------------------------------------&#10;asset: VARCHAR&#10;action: VARCHAR&#10;created_at: TIMESTAMP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;align=left;" vertex="1" parent="1">
+      <mxGeometry x="340" y="20" width="300" height="180" as="geometry"/>
     </mxCell>
     
-    <!-- Source Table: RISK_METADATA.TAGS -->
-    <mxCell id="300" value="RISK_METADATA.TAGS&#10;--------------------------------------&#10;tag_id: VARCHAR&#10;entity_id: VARCHAR&#10;tag: VARCHAR" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fce5cd;align=left;" vertex="1" parent="1">
-      <mxGeometry x="40" y="180" width="220" height="140" as="geometry"/>
+    <!-- Entity: OPERATIONS_CASE_INFO -->
+    <mxCell id="300" value="OPERATIONS_CASE_INFO&#10;--------------------------------------&#10;case_id: VARCHAR&#10;operation_id: VARCHAR&#10;metadata: TEXT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;align=left;" vertex="1" parent="1">
+      <mxGeometry x="660" y="20" width="300" height="180" as="geometry"/>
     </mxCell>
     
-    <!-- Source Table: ENTITY_SERVICE.INSTITUTIONS -->
-    <mxCell id="400" value="ENTITY_SERVICE.INSTITUTIONS&#10;--------------------------------------&#10;institution_id: VARCHAR&#10;name: VARCHAR&#10;type: VARCHAR" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ead1dc;align=left;" vertex="1" parent="1">
-      <mxGeometry x="40" y="340" width="220" height="140" as="geometry"/>
+    <!-- Entity: INSTITUTIONS -->
+    <mxCell id="400" value="INSTITUTIONS&#10;--------------------------------------&#10;institution_id: VARCHAR&#10;name: VARCHAR&#10;type: VARCHAR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ead1dc;align=left;" vertex="1" parent="1">
+      <mxGeometry x="20" y="220" width="300" height="180" as="geometry"/>
     </mxCell>
     
-    <!-- Source Table: COMPLIANCE_CMT.OPERATIONS_CASE_INFO -->
-    <mxCell id="500" value="COMPLIANCE_CMT.OPERATIONS_CASE_INFO&#10;--------------------------------------&#10;case_id: VARCHAR&#10;details: TEXT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c2dfff;align=left;" vertex="1" parent="1">
-      <mxGeometry x="40" y="500" width="220" height="140" as="geometry"/>
+    <!-- Entity: TAGS -->
+    <mxCell id="500" value="TAGS&#10;--------------------------------------&#10;tag_id: VARCHAR&#10;entity_id: VARCHAR&#10;tag: VARCHAR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2dfff;align=left;" vertex="1" parent="1">
+      <mxGeometry x="340" y="220" width="300" height="180" as="geometry"/>
     </mxCell>
     
-    <!-- Source Table: CASE_CONTENTS -->
-    <mxCell id="600" value="CASE_CONTENTS&#10;--------------------------------------&#10;content_id: VARCHAR&#10;case_id: VARCHAR&#10;content: TEXT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=left;" vertex="1" parent="1">
-      <mxGeometry x="270" y="20" width="220" height="140" as="geometry"/>
+    <!-- Entity: CASE_CONTENTS -->
+    <mxCell id="600" value="CASE_CONTENTS&#10;--------------------------------------&#10;content_id: VARCHAR&#10;case_id: VARCHAR&#10;content: TEXT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;align=left;" vertex="1" parent="1">
+      <mxGeometry x="660" y="220" width="300" height="180" as="geometry"/>
     </mxCell>
     
-    <!-- Source Table: ALERT_CONTENTS -->
-    <mxCell id="700" value="ALERT_CONTENTS&#10;--------------------------------------&#10;alert_id: VARCHAR&#10;case_id: VARCHAR&#10;alert_type: VARCHAR" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;align=left;" vertex="1" parent="1">
-      <mxGeometry x="270" y="180" width="220" height="140" as="geometry"/>
+    <!-- Entity: ALERT_CONTENTS -->
+    <mxCell id="700" value="ALERT_CONTENTS&#10;--------------------------------------&#10;alert_id: VARCHAR&#10;alert_type: VARCHAR&#10;created_at: TIMESTAMP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;align=left;" vertex="1" parent="1">
+      <mxGeometry x="20" y="420" width="300" height="180" as="geometry"/>
     </mxCell>
     
     <!-- Relationships -->
-    <!-- AUDIT_SERVICE to COMPLIANCE_ANALYSIS -->
+    <!-- Relationship: AUDIT_SERVICE to COMPLIANCE_ANALYSIS -->
     <mxCell id="800" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="200" target="100">
-      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+      <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     
-    <!-- RISK_METADATA.TAGS to COMPLIANCE_ANALYSIS -->
-    <mxCell id="900" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="300" target="100">
-      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
-    </mxCell>
-    
-    <!-- ENTITY_SERVICE.INSTITUTIONS to COMPLIANCE_ANALYSIS -->
-    <mxCell id="1000" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="400" target="100">
-      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
-    </mxCell>
-    
-    <!-- COMPLIANCE_CMT.OPERATIONS_CASE_INFO to COMPLIANCE_ANALYSIS -->
-    <mxCell id="1100" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="500" target="100">
-      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
-    </mxCell>
-    
-    <!-- CASE_CONTENTS to COMPLIANCE_ANALYSIS -->
-    <mxCell id="1200" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="600" target="100">
-      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
-    </mxCell>
-    
-    <!-- ALERT_CONTENTS to COMPLIANCE_ANALYSIS -->
-    <mxCell id="1300" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="700" target="100">
-      <mxGeometry width="50" height="50" relative="1" as="geometry"/>
-    </mxCell>
-  </root>
+    <!-- Relationship: OPERATIONS_CASE_INFO to COMPLIANCE_ANALYSIS -->
+   <mxCell id="900" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="300" target="100">
+  <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+
+<!-- Relationship: INSTITUTIONS to COMPLIANCE_ANALYSIS -->
+<mxCell id="1000" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="400" target="100">
+  <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+
+<!-- Relationship: TAGS to COMPLIANCE_ANALYSIS -->
+<mxCell id="1100" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="500" target="100">
+  <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+
+<!-- Relationship: CASE_CONTENTS to COMPLIANCE_ANALYSIS -->
+<mxCell id="1200" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="600" target="100">
+  <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+
+<!-- Relationship: ALERT_CONTENTS to COMPLIANCE_ANALYSIS -->
+<mxCell id="1300" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;html=1;" edge="1" parent="1" source="700" target="100">
+  <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+
+</root>
 </mxGraphModel>
